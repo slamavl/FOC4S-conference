@@ -25,6 +25,8 @@
         <a href="#about" class="hover:text-indigo-400">About</a>
         <a href="#speakers" class="hover:text-indigo-400">Speakers</a>
         <a href="#schedule" class="hover:text-indigo-400">Schedule</a>
+        <a href="#venue" class="hover:text-indigo-400">Venue</a>
+        <a href="#board" class="hover:text-indigo-400">Board</a>
         <a href="#register" class="bg-indigo-400 text-white px-4 py-2 rounded-xl">Register</a>
       </nav>
     </div>
@@ -60,38 +62,135 @@
   </section>
 
   <!-- Speakers -->
-  <section id="speakers" class="bg-gray-100 py-16 px-6">
+  <section id="speakers" class="bg-gray-100 text-slate-900 py-20 px-6">
     <div class="max-w-6xl mx-auto">
       <h3 class="text-3xl font-semibold mb-8 text-center">Featured Speakers</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-6 rounded-2xl shadow">
           <div class="h-40 bg-gray-200 rounded-xl mb-4"></div>
           <h4 class="text-xl font-bold">Speaker Name</h4>
-          <p class="text-sm">CEO, Company</p>
+          <p class="text-sm">University</p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow">
           <div class="h-40 bg-gray-200 rounded-xl mb-4"></div>
           <h4 class="text-xl font-bold">Speaker Name</h4>
-          <p class="text-sm">CTO, Company</p>
+          <p class="text-sm">University</p>
         </div>
         <div class="bg-white p-6 rounded-2xl shadow">
           <div class="h-40 bg-gray-200 rounded-xl mb-4"></div>
           <h4 class="text-xl font-bold">Speaker Name</h4>
-          <p class="text-sm">Founder, Startup</p>
+          <p class="text-sm">University</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Schedule -->
-  <section id="schedule" class="max-w-5xl mx-auto py-16 px-6">
-    <h3 class="text-3xl font-semibold mb-6">Schedule</h3>
-    <ul class="space-y-4">
-      <li class="p-4 bg-white rounded-xl shadow">09:00 - Opening Keynote</li>
-      <li class="p-4 bg-white rounded-xl shadow">11:00 - Panel Discussion</li>
-      <li class="p-4 bg-white rounded-xl shadow">14:00 - Workshops</li>
-    </ul>
+  <section id="schedule" class="bg-slate-900 text-slate-900 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+     <h3 class="text-3xl font-semibold mb-8 text-center" style="color: white"">Schedule</h3>
+     <ul class="space-y-4">
+      <li class="p-4 bg-white rounded-xl shadow" style="color: black">09:00 - Opening Keynote</li>
+      <li class="p-4 bg-white rounded-xl shadow" style="color: black">11:00 - Panel Discussion</li>
+      <li class="p-4 bg-white rounded-xl shadow" style="color: black">14:00 - Workshops</li>
+     </ul>
+    </div>
   </section>
+
+  <!-- Venue -->
+  <section id="venue" class="bg-gray-100 text-slate-900 py-20 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-8 text-center">Venue</h3>
+
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- University Photo -->
+        <div>
+          <!-- Replace with actual university image -->
+          <img src="university.jpg" alt="University Venue" class="rounded-2xl shadow-lg w-full h-80 object-cover" />
+        </div>
+
+        <!-- Map + Info -->
+        <div class="space-y-6">
+          <div>
+            <h4 class="text-xl font-bold">University of Example</h4>
+            <p class="text-slate-400">Department of Chemistry<br/>City, Country</p>
+          </div>
+
+          <!-- Embedded Map -->
+          <div class="w-full h-64 rounded-2xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/place/Ke+Karlovu+2026%2F5,+120+00+Nov%C3%A9+M%C4%9Bsto,+%C4%8Cesko/@50.070213,14.427909,17z/data=!4m6!3m5!1s0x470b948a1cb49e4d:0xed2e9584a001af7f!8m2!3d50.0701855!4d14.428204!16s%2Fg%2F11cslxdjqn?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D&output=embed"
+              class="w-full h-full border-0"
+              allowfullscreen=""
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Conference Board -->
+ <section id="board" class="bg-slate-900 py-16 px-6">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-10 text-center">Conference Board</h3>
+
+    <div id="boardContainer" class="grid md:grid-cols-4 gap-10">
+
+      <div class="board-member cursor-pointer" onclick="expandMember(this)">
+        <img src="person1.jpg" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4" />
+        <h4 class="font-bold text-lg">Vladislav Slama</h4>
+        <p class="text-sm text-slate-400">Charles University</p>
+        <div class="bio hidden mt-4 text-sm text-slate-300">
+          Research focus: quantum dynamics and electronic structure theory.
+        </div>
+      </div>
+
+      <div class="board-member cursor-pointer" onclick="expandMember(this)">
+        <img src="person2.jpg" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4" />
+        <h4 class="font-bold text-lg">Virginia Carnevali</h4>
+        <p class="text-sm text-slate-400">EPFL</p>
+        <div class="bio hidden mt-4 text-sm text-slate-300">
+          Works on quantum algorithms for chemistry and strongly correlated systems.
+        </div>
+      </div>
+
+      <div class="board-member cursor-pointer" onclick="expandMember(this)">
+        <img src="person3.jpg" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4" />
+        <h4 class="font-bold text-lg">Andrea Levi</h4>
+        <p class="text-sm text-slate-400">EPFL</p>
+        <div class="bio hidden mt-4 text-sm text-slate-300">
+          Specializes in density functional theory and materials modeling.
+        </div>
+      </div>
+
+      <div class="board-member cursor-pointer" onclick="expandMember(this)">
+        <img src="person4.jpg" class="w-32 h-32 mx-auto rounded-full object-cover shadow-lg mb-4" />
+        <h4 class="font-bold text-lg">Sophie Johnson</h4>
+        <p class="text-sm text-slate-400">EPFL</p>
+        <div class="bio hidden mt-4 text-sm text-slate-300">
+          Research in molecular simulations and spectroscopy.
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function expandMember(member) {
+      const allMembers = document.querySelectorAll('.board-member');
+      allMembers.forEach(m => {
+        if(m !== member) {
+          m.classList.remove('col-span-4');
+          m.querySelector('.bio').classList.add('hidden');
+        }
+      });
+      const bio = member.querySelector('.bio');
+      bio.classList.toggle('hidden');
+      member.classList.toggle('col-span-4');
+    }
+  </script>
+</section>
 
   <!-- Footer -->
   <footer class="bg-gray-900 text-white text-center py-6">
