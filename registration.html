@@ -56,6 +56,7 @@
     <div>
       <label class="block font-medium">Participation Type</label>
       <select name="participation" class="w-full border p-3 rounded-lg" onchange="toggleAbstract(this.value)" required>
+        <option value="">Select option</option>
         <option value="listener">Listener</option>
         <option value="poster">Poster</option>
         <option value="talk">Contributed talk</option>
@@ -71,7 +72,7 @@
     <script>
     function toggleAbstract(value) {
       const box = document.getElementById('abstractBox');
-      box.classList.toggle('hidden', value !== 'speaker');
+      box.classList.toggle('hidden', value !== 'talk' && value !== 'poster');
     }
     </script>
 
