@@ -55,12 +55,25 @@
 
     <div>
       <label class="block font-medium">Participation Type</label>
-      <select name="participation" class="w-full border p-3 rounded-lg">
+      <select name="participation" class="w-full border p-3 rounded-lg" onchange="toggleAbstract(this.value)" required>
         <option value="listener">Listener</option>
         <option value="poster">Poster</option>
         <option value="talk">Contributed talk</option>
       </select>
     </div>
+
+    <!-- Hidden section -->
+    <div id="abstractBox" class="hidden mt-4">
+      <label class="block font-medium">Title of the contribution</label>
+      <input type="text" name="talk_title" class="w-full border p-3 rounded-lg">
+    </div>
+
+    <script>
+    function toggleAbstract(value) {
+      const box = document.getElementById('abstractBox');
+      box.classList.toggle('hidden', value !== 'speaker');
+    }
+    </script>
 
     <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-xl">
       Submit Registration
