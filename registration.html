@@ -76,7 +76,7 @@
       <select name="participation" class="w-full border p-3 rounded-lg" onchange="toggleAbstract(this.value)" required>
         <option value="">Select option</option>
         <option value="listener">Listener</option>
-        <option value="poster">Poster</option>
+        <!-- option value="poster">Poster</option -->
         <option value="talk">Contributed talk</option>
       </select>
     </div>
@@ -87,18 +87,36 @@
       <input type="text" name="talk_title" class="w-full border p-3 rounded-lg">
     </div>
 
-    <script>
-    function toggleAbstract(value) {
-      const box = document.getElementById('abstractBox');
-      box.classList.toggle('hidden', value !== 'talk' && value !== 'poster');
-    }
-    </script>
-
     <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-xl">
       Submit Registration
     </button>
 
   </form>
+
+  
+    <script>
+    function toggleAbstract(value) {
+      const box = document.getElementById('abstractBox');
+      box.classList.toggle('hidden', value !== 'talk' && value !== 'poster');
+    }
+
+      // Form validation for participation type
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+  const select = document.getElementById('participationSelect');
+  const error = document.getElementById('participationError');
+
+  if (select.value === "") {
+    e.preventDefault();          // Stop form submission
+    error.classList.remove('hidden'); // Show error message
+    select.focus();              // Focus on the select
+  } else {
+    error.classList.add('hidden');    // Hide error if valid
+  }
+});
+      
+    </script> 
+
+  
 </div>
 
 </body>
